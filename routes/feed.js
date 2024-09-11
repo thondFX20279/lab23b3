@@ -1,10 +1,10 @@
-import { Router } from "express";
-import { body } from "express-validator";
+import express from "express";
+import expressValidate from "express-validator";
 import upload from "../middleware/file_upload.js";
 import * as controllers from "../controller/index.js";
-
 import verifyToken from "../middleware/verify-token.js";
-const routes = Router();
+const { body } = expressValidate;
+const routes = express.Router();
 routes.get("/posts", verifyToken, controllers.getPosts);
 routes.post(
   "/post",

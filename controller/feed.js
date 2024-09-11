@@ -3,8 +3,10 @@ import fs from "fs";
 
 import User from "../model/user.js";
 import path from "path";
-import { validationResult } from "express-validator";
+import expressValidate from "express-validator";
 import socketSever from "../socket.js";
+
+const { validationResult } = expressValidate;
 export const getPosts = async (req, res, next) => {
   try {
     const currentPage = parseInt(req.query.page) || 1;

@@ -1,9 +1,10 @@
-import { Router } from "express";
+import express from "express";
 import * as controllers from "../controller/index.js";
-import { body } from "express-validator";
+import expressValidate from "express-validator";
 import User from "../model/user.js";
 import verifyToken from "../middleware/verify-token.js";
-const routes = Router();
+const routes = express.Router();
+const { body } = expressValidate;
 routes.put(
   "/signup",
   [

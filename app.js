@@ -1,14 +1,14 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { urlencoded } from "body-parser";
+import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import initialRoutes from "./routes/index.js";
 import socketSever from "./socket.js";
 dotenv.config();
-
+const { urlencoded } = bodyParser;
 const Port = process.env.PORT || 3030;
 const uri =
   "mongodb+srv://thondfx20279:NDTnvt01987274@cluster0.foib8.mongodb.net/message22?retryWrites=true&w=majority&appName=Cluster0";
