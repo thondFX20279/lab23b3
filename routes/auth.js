@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as controllers from "../controller";
+import * as controllers from "../controller/index.js";
 import { body } from "express-validator";
 import User from "../model/user";
 import verifyToken from "../middleware/verify-token";
