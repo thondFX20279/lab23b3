@@ -1,8 +1,8 @@
 import { Router } from "express";
-import * as controllers from "../controller";
+import * as controllers from "../controller/index.js";
 import { body } from "express-validator";
-import User from "../model/user";
-import verifyToken from "../middleware/verify-token";
+import User from "../model/user.js";
+import verifyToken from "../middleware/verify-token.js";
 const routes = Router();
 routes.put(
   "/signup",

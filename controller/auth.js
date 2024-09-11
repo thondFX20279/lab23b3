@@ -1,7 +1,7 @@
 import { validationResult } from "express-validator";
-import User from "../model/user";
+import User from "../model/user.js";
 import bcryptjs from "bcryptjs";
-import generateAccessToken from "../middleware/generate_token";
+import generateAccessToken from "../middleware/generate_token.js";
 export const signup = async (req, res, next) => {
   try {
     const errors = validationResult(req);

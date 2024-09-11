@@ -5,8 +5,8 @@ import { urlencoded } from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
-import initialRoutes from "./routes";
-import socketSever from "./socket";
+import initialRoutes from "./routes/index.js";
+import socketSever from "./socket.js";
 dotenv.config();
 
 const Port = process.env.PORT || 3030;
