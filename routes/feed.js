@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator";
 import upload from "../middleware/file_upload";
-import * as controllers from "../controller";
+import * as controllers from "../controller/index.js";
 
 import verifyToken from "../middleware/verify-token";
 const routes = Router();
