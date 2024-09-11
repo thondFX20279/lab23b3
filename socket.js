@@ -1,4 +1,4 @@
-import socket from "socket.io";
+import * as socket from "socket.io";
 let io;
 
 const socketSever = {
