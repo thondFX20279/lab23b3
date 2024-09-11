@@ -17,7 +17,7 @@ const app = express();
 app.use(cookieParser());
 app.use(urlencoded({ extended: false }));
 app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join(process.cwd(), "images")));
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST, PUT, PATCH, DELETE");

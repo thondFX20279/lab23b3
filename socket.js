@@ -1,9 +1,10 @@
 import * as socket from "socket.io";
 let io;
 
+const { Server } = socket;
 const socketSever = {
   init: (server) => {
-    io = socket(server, { cors: { origin: "*" } });
+    io = new Server(server, { cors: { origin: "*" } });
     return io;
   },
   getIO: () => {

@@ -140,7 +140,7 @@ export const deletePost = async (req, res, next) => {
 };
 
 const clearImage = function (imagePath) {
-  fs.unlinkSync(path.join(__dirname, "..", imagePath), (err) => {
+  fs.unlinkSync(path.join(process.cwd(), imagePath), (err) => {
     console.log(err);
   });
 };
