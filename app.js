@@ -5,7 +5,7 @@ import { urlencoded } from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
-import initialRoutes from "./routes";
+import initialRoutes from "./routes/index.js";
 import socketSever from "./socket";
 dotenv.config();
 
